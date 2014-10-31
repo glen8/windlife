@@ -1,0 +1,54 @@
+.wl_imageuplad_border_css,.wl_fileupload_border_css{
+	float: left;
+}
+.wl_imageuplad_border_css input,.wl_fileupload_border_css input{
+	float:left;
+}
+.wl_imageupload_button_css,.wl_fileupload_button_css{
+	float: left;
+	display:inline;
+	height: 24px;
+	padding: 0 8px;
+	border-width: 1px;
+	border-style:solid;
+	border-color: #eee #666 #666 #eee;
+	background: #ddd;
+	cursor: pointer;
+	color: #333;
+	text-decoration: none;
+	margin-left:6px;
+}
+.wl_imageuplad_img_border_css{
+	text-align:center;
+}
+.wl_multiple_image_upload_fieldest_css{
+	padding: 6px 10px;
+	border: 1px solid #dce3ed;
+	color: #004499;
+}
+.wl_multiple_image_upload_fieldest_css legend{
+	border: none;
+    color: #347ADD;
+    font-weight: 700;
+    padding: 3px 8px;
+}
+.wl_multiple_image_upload_fieldest_css .onShow{	
+    line-height: 18px;
+    margin: 0 auto;
+    padding: 2px 10px 2px 23px;
+    vertical-align: middle;
+    color: #959595;
+    text-align: center;
+    width: 150px;
+}
+.wl_picList p{
+	float: left;
+	margin:4px 0;
+}
+.wl_picList input{
+	margin-right: 10px;
+}
+.wl_picList a{
+	color: #444;
+	text-decoration: none;
+}

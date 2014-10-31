@@ -1,0 +1,7 @@
+.wl_advert_stripfocus {overflow:hidden; position:relative; text-align:left;}
+.wl_advert_stripfocus ul {position:absolute;}
+.wl_advert_stripfocus ul li {float:left; overflow:hidden; position:relative; background:#000;}
+.wl_advert_stripfocus ul li div {position:absolute; overflow:hidden;}
+.wl_advert_stripfocus .btn {position:absolute;  height:14px; bottom:16px; text-align:center;}
+.wl_advert_stripfocus .btn span {display:inline-block; height:5px; _font-size:0; margin-left:5px; cursor:pointer; background:#fff;}
+.wl_advert_stripfocus .btn span.on {background:#f60;} 

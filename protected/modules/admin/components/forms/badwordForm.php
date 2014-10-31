@@ -1,0 +1,47 @@
+<?php
+return array(
+	'id'=>'badword_form',
+	'elements'=>array(
+		'badword'=>array(
+			'type'=>'form',
+			'title'=>'敏感词信息',			
+			'elements'=>array(
+	    		'badword'=>array(
+					'type'=>'text',
+	    			'class'=>'input-text',
+	    			'size'=>'25',
+	    			'hint'=>'必填项',
+				),				
+				'replaceword'=>array(
+					'type'=>'text',
+	    			'class'=>'input-text',
+	    			'size'=>'25',
+	    			'hint'=>'请输入替换词',
+				),
+				'level'=>array(
+					'type'=>'radiolist',
+					'items'=>array('1'=>'一般','2'=>'危险'),
+					'separator'=>'&nbsp;&nbsp;&nbsp;&nbsp;',
+					'class'=>'input-radio',
+					'hint'=>'(一般: 用替换词替换 , 危险: 直接去除)',
+				),
+			),
+		),
+	),
+	'buttons'=>array(
+		'badword_form_button'=>array(
+			'type'=>'submit',
+			'label'=>'提交',
+			'class'=>'button',
+			'id'=>'dosubmit',
+		),
+	),
+	'activeForm'=>array(
+		'enableAjaxValidation'=>true,
+		'enableClientValidation'=>true,
+		'clientOptions' => array(
+			'validateOnSubmit'=>true,
+			'afterValidateAttribute'=>'js:afterValidate',
+		),
+	),
+);

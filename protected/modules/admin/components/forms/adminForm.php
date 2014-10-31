@@ -1,0 +1,56 @@
+<?php
+return array(
+	'id'=>'admin_form',
+	'elements'=>array(
+		'admin'=>array(
+			'type'=>'form',
+			'title'=>'管理员信息',			
+			'elements'=>array(
+	    		'username'=>array(
+					'type'=>'text',
+	    			'class'=>'input-text',
+	    			'hint'=>'用户名为必填信息，且不可重复！',
+				),
+				'password'=>array(
+					'type'=>'password',
+					'class'=>'input-text',
+					'hint'=>'密码格式应为6位以上',
+				),
+				'r_password'=>array(
+					'type'=>'password',
+					'class'=>'input-text',
+				),
+				'email'=>array(
+					'type'=>'text',
+					'class'=>'input-text',
+	    			'hint'=>'邮箱格式为：jsjgjf@qq.com',
+					'size'=>'30'
+				),
+				'name'=>array(
+					'type'=>'text',
+					'class'=>'input-text'
+				),
+				'role_name'=>array(
+					'type'=>'dropdownlist',
+					'items'=>CHtml::listData(Admin::model()->wl_getRoles(), 'name', 'description'),
+	            ),
+			),
+		),
+	),
+	'buttons'=>array(
+		'admin_form_button'=>array(
+			'type'=>'submit',
+			'label'=>'提交',
+			'class'=>'button',
+			'id'=>'dosubmit',
+		),
+	),
+	'activeForm'=>array(
+		'enableAjaxValidation'=>true,
+		'enableClientValidation'=>true,
+		'clientOptions' => array(
+			'validateOnChange'=>true,
+			'afterValidateAttribute'=>'js:afterValidate',
+		),
+	),
+);

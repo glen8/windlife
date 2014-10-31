@@ -1,0 +1,47 @@
+<?php
+return array(
+	'id'=>'position_form',
+	'elements'=>array(
+		'position'=>array(
+			'type'=>'form',
+			'title'=>'发布位信息',			
+			'elements'=>array(
+	    		'key_name'=>array(
+					'type'=>'text',
+	    			'class'=>'input-text',
+	    			'size'=>'25',
+	    			'hint'=>'以页面命名，例如：index_',
+				),				
+				'description'=>array(
+					'type'=>'textarea',
+					'class'=>'input-textarea',
+					'style'=>'height: 60px;',
+					'cols'=>'30',
+					'hint'=>'请详细描述位置'
+				),
+				'type'=>array(
+					'type'=>'radiolist',
+					'items'=>array('0'=>'内容','1'=>'广告'),
+					'separator'=>'&nbsp;&nbsp;&nbsp;&nbsp;',
+					'class'=>'input-radio',
+				),
+			),
+		),
+	),
+	'buttons'=>array(
+		'position_form_button'=>array(
+			'type'=>'submit',
+			'label'=>'提交',
+			'class'=>'button',
+			'id'=>'dosubmit',
+		),
+	),
+	'activeForm'=>array(
+		'enableAjaxValidation'=>true,
+		'enableClientValidation'=>true,
+		'clientOptions' => array(
+			'validateOnChange'=>true,
+			'afterValidateAttribute'=>'js:afterValidate',
+		),
+	),
+);

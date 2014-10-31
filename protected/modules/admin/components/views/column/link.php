@@ -1,0 +1,2 @@
+<?php $this->renderPartial('application.modules.admin.views._layouts.sub_nav');?>
+<?php $this->renderPartial('application.modules.admin.views._layouts.more_form', array('form'=>$form,'form_type'=>$form_type)); ?>

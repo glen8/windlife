@@ -1,0 +1,1 @@
+<?php $this->renderPartial('application.modules.admin.views._layouts.alert_form', array('form'=>$form)); ?>

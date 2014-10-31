@@ -1,0 +1,39 @@
+<?php
+return array(
+	'id'=>'module_form',
+	'elements'=>array(
+		'module'=>array(
+			'type'=>'form',
+			'title'=>'模块信息',			
+			'elements'=>array(
+	    		'title'=>array(
+					'type'=>'text',
+	    			'class'=>'input-text',
+				),
+				'name'=>array(
+					'type'=>'text',
+					'class'=>'input-text'
+				),
+				'desn'=>array(
+					'type'=>'textarea',	
+					'rows'=>4,
+					'cols'=>30				
+				),
+			),
+		),
+	),
+	'buttons'=>array(
+		'module_form_button'=>array(
+			'type'=>'submit',
+			'label'=>'提交',
+		),
+	),
+	'activeForm'=>array(
+		'enableAjaxValidation'=>true,
+		'enableClientValidation'=>true,
+		'clientOptions' => array(
+			'validateOnChange'=>true,
+			'afterValidateAttribute'=>'js:afterValidate',
+		),
+	),
+);
