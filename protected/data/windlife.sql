@@ -2,15 +2,15 @@
 Navicat MySQL Data Transfer
 
 Source Server         : conn
-Source Server Version : 50537
+Source Server Version : 50539
 Source Host           : localhost:3306
 Source Database       : windlife
 
 Target Server Type    : MYSQL
-Target Server Version : 50537
+Target Server Version : 50539
 File Encoding         : 65001
 
-Date: 2014-09-03 13:21:11
+Date: 2014-11-03 15:14:27
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -35,7 +35,7 @@ CREATE TABLE `wl_admin` (
 -- ----------------------------
 -- Records of wl_admin
 -- ----------------------------
-INSERT INTO `wl_admin` VALUES ('1', 'admin', '$2a$13$W26iGIQ3G/wir0K8.z3a8.Sm9Rm7D1QQA7ZhojhUvix3LKTXQkzF.', 'jsjgjf@126.com', '郭建飞', '2011-06-13 14:34:41', '2014-08-26 10:33:10', '127.0.0.1', '1');
+INSERT INTO `wl_admin` VALUES ('1', 'admin', '$2a$13$W26iGIQ3G/wir0K8.z3a8.Sm9Rm7D1QQA7ZhojhUvix3LKTXQkzF.', 'jsjgjf@126.com', '郭建飞', '2011-06-13 14:34:41', '2014-11-03 14:50:28', '127.0.0.1', '1');
 INSERT INTO `wl_admin` VALUES ('6', '技术部', '$2a$13$lwgFzkYTqet8LmGpFwZWUud8ExhX0T9e5rmhx/gp.NdoNo7vLZeLK', 'jsjgjf@qq.com', '郭建飞', '2013-11-26 17:02:26', '2013-11-29 22:03:37', '127.0.0.1', '0');
 
 -- ----------------------------
@@ -55,8 +55,6 @@ CREATE TABLE `wl_admin_panel` (
 -- ----------------------------
 -- Records of wl_admin_panel
 -- ----------------------------
-INSERT INTO `wl_admin_panel` VALUES ('19', '1', '公司简介', '/?r=admin/page/edit&column_id=2', '1402118390');
-INSERT INTO `wl_admin_panel` VALUES ('20', '1', '附件管理', '/?r=admin/attachment/index', '1402118639');
 
 -- ----------------------------
 -- Table structure for wl_advert
@@ -191,7 +189,7 @@ INSERT INTO `wl_attachment` VALUES ('26', '二级页面-账户注册修改版-�
 INSERT INTO `wl_attachment` VALUES ('27', '二级页面-找回密码.jpg', './uploadfiles/images/0/20140726/14063625467740.jpg', '67002', '.jpg', '二级页面-找回密码', '1', '0', '0', '0', '0', '0', '1406362546', '127.0.0.1', '0');
 INSERT INTO `wl_attachment` VALUES ('28', '二级页面-账户注册修改版-输入框状态.jpg', './uploadfiles/images/0/20140726/14063626743411.jpg', '78263', '.jpg', '二级页面-账户注册修改版-输入框状态', '1', '0', '0', '0', '0', '0', '1406362674', '127.0.0.1', '0');
 INSERT INTO `wl_attachment` VALUES ('29', '二级页面-账户注册修改版-输入框状态.jpg', './uploadfiles/images/0/20140726/14063627708578.jpg', '78263', '.jpg', '二级页面-账户注册修改版-输入框状态', '1', '0', '0', '0', '0', '0', '1406362770', '127.0.0.1', '0');
-INSERT INTO `wl_attachment` VALUES ('30', '二级页面-账户注册修改版.jpg', './uploadfiles/images/0/20140726/14063628154738.jpg', '73103', '.jpg', '二级页面-账户注册修改版', '1', '0', '0', '0', '0', '0', '1406362815', '127.0.0.1', '1');
+INSERT INTO `wl_attachment` VALUES ('30', '二级页面-账户注册修改版.jpg', './uploadfiles/images/0/20140726/14063628154738.jpg', '73103', '.jpg', '二级页面-账户注册修改版', '1', '0', '0', '0', '0', '0', '1406362815', '127.0.0.1', '0');
 
 -- ----------------------------
 -- Table structure for wl_attachment_item
@@ -211,7 +209,6 @@ CREATE TABLE `wl_attachment_item` (
 -- Records of wl_attachment_item
 -- ----------------------------
 INSERT INTO `wl_attachment_item` VALUES ('1', 'Article', '3', '12');
-INSERT INTO `wl_attachment_item` VALUES ('21', 'GalleryImg', '30', '20');
 
 -- ----------------------------
 -- Table structure for wl_authassignment
@@ -258,12 +255,10 @@ INSERT INTO `wl_authitem` VALUES ('admin_advert_index', '1', '广告管理', nul
 INSERT INTO `wl_authitem` VALUES ('admin_advert_list', '0', '广告列表', null, 'N;', '109');
 INSERT INTO `wl_authitem` VALUES ('admin_advert_listorder', '0', '广告排序', null, 'N;', '113');
 INSERT INTO `wl_authitem` VALUES ('admin_advert_templet', '0', '广告模板', null, 'N;', '100');
-INSERT INTO `wl_authitem` VALUES ('admin_advert_type', '0', '广告类型', null, 'N;', '100');
 INSERT INTO `wl_authitem` VALUES ('admin_article_create', '0', '添加文章', null, 'N;', '86');
 INSERT INTO `wl_authitem` VALUES ('admin_article_delete', '0', '删除文章', null, 'N;', '92');
 INSERT INTO `wl_authitem` VALUES ('admin_article_deleteAll', '0', '批量删除', null, 'N;', '93');
 INSERT INTO `wl_authitem` VALUES ('admin_article_index', '1', '文章管理', null, 'N;', '85');
-INSERT INTO `wl_authitem` VALUES ('admin_article_search', '0', '搜索', null, 'N;', '93');
 INSERT INTO `wl_authitem` VALUES ('admin_article_update', '0', '修改文章', null, 'N;', '91');
 INSERT INTO `wl_authitem` VALUES ('admin_attachment_delete', '0', '附件删除', null, 'N;', '81');
 INSERT INTO `wl_authitem` VALUES ('admin_attachment_deleteAll', '0', '附件批量删除', null, 'N;', '82');
@@ -305,17 +300,12 @@ INSERT INTO `wl_authitem` VALUES ('admin_model_create', '0', '模型添加', nul
 INSERT INTO `wl_authitem` VALUES ('admin_model_delete', '0', '模型删除', null, 'N;', '56');
 INSERT INTO `wl_authitem` VALUES ('admin_model_index', '1', '模型管理', null, 'N;', '53');
 INSERT INTO `wl_authitem` VALUES ('admin_model_update', '0', '模型修改', null, 'N;', '55');
-INSERT INTO `wl_authitem` VALUES ('admin_module_advlist', '1', '广告管理', null, 'N;', '20');
-INSERT INTO `wl_authitem` VALUES ('admin_module_create', '0', '添加模块', null, 'N;', '17');
-INSERT INTO `wl_authitem` VALUES ('admin_module_del', '0', '删除模块', null, 'N;', '19');
-INSERT INTO `wl_authitem` VALUES ('admin_module_index', '1', '模块管理', null, 'N;', '16');
-INSERT INTO `wl_authitem` VALUES ('admin_module_upate', '0', '修改模块', null, 'N;', '18');
 INSERT INTO `wl_authitem` VALUES ('admin_mparam_create', '0', '模型参数添加', null, 'N;', '88');
 INSERT INTO `wl_authitem` VALUES ('admin_mparam_delete', '0', '模型参数删除', null, 'N;', '90');
 INSERT INTO `wl_authitem` VALUES ('admin_mparam_index', '1', '模型参数管理', null, 'N;', '87');
 INSERT INTO `wl_authitem` VALUES ('admin_mparam_update', '0', '模型参数修改', null, 'N;', '89');
-INSERT INTO `wl_authitem` VALUES ('admin_page_edit', '0', '单页面管理', null, 'N;', '83');
-INSERT INTO `wl_authitem` VALUES ('admin_page_preview', '0', '单页面管理', null, 'N;', '83');
+INSERT INTO `wl_authitem` VALUES ('admin_page_edit', '1', '单页面管理', null, 'N;', '83');
+INSERT INTO `wl_authitem` VALUES ('admin_page_preview', '0', '点击访问', null, 'N;', '84');
 INSERT INTO `wl_authitem` VALUES ('admin_position_create', '0', '发布位添加', null, 'N;', '101');
 INSERT INTO `wl_authitem` VALUES ('admin_position_delete', '0', '发布位删除', null, 'N;', '102');
 INSERT INTO `wl_authitem` VALUES ('admin_position_index', '1', '发布位管理', null, 'N;', '97');
@@ -331,13 +321,16 @@ INSERT INTO `wl_authitem` VALUES ('admin_role_delete', '0', '角色删除', null
 INSERT INTO `wl_authitem` VALUES ('admin_role_index', '1', '角色管理', null, 'N;', '75');
 INSERT INTO `wl_authitem` VALUES ('admin_role_setaccess', '0', '角色权限设置', null, 'N;', '80');
 INSERT INTO `wl_authitem` VALUES ('admin_role_update', '0', '角色修改', null, 'N;', '78');
-INSERT INTO `wl_authitem` VALUES ('admin_setting_index', '1', '基础设置', null, 'N;', '48');
+INSERT INTO `wl_authitem` VALUES ('admin_setting_index_base', '1', '基础设置', null, 'N;', '48');
+INSERT INTO `wl_authitem` VALUES ('admin_setting_index_count', '1', '统计代码', null, 'N;', '52');
+INSERT INTO `wl_authitem` VALUES ('admin_setting_index_email', '1', '邮件设置', null, 'N;', '50');
+INSERT INTO `wl_authitem` VALUES ('admin_setting_index_upload', '1', '上传设置', null, 'N;', '49');
 INSERT INTO `wl_authitem` VALUES ('admin_sitemap_index', '1', 'Sitemap生成', null, 'N;', '42');
+INSERT INTO `wl_authitem` VALUES ('admin_tags_index', '1', '标签管理', null, 'N;', '119');
 INSERT INTO `wl_authitem` VALUES ('admin_urlmanage_create', '0', 'URL规则添加', null, 'N;', '65');
 INSERT INTO `wl_authitem` VALUES ('admin_urlmanage_delete', '0', 'URL规则删除', null, 'N;', '67');
 INSERT INTO `wl_authitem` VALUES ('admin_urlmanage_index', '1', 'URL管理', null, 'N;', '57');
 INSERT INTO `wl_authitem` VALUES ('admin_urlmanage_update', '0', 'URL规则修改', null, 'N;', '66');
-INSERT INTO `wl_authitem` VALUES ('position_position_index', '1', '发布位管理', null, 'N;', '97');
 INSERT INTO `wl_authitem` VALUES ('SuperAdmin', '2', '超级管理员', '', 's:10:\"is_super=1\";', null);
 INSERT INTO `wl_authitem` VALUES ('SystemAdmin', '2', '系统管理员', '', 's:0:\"\";', null);
 
@@ -357,7 +350,6 @@ CREATE TABLE `wl_authitemchild` (
 -- ----------------------------
 -- Records of wl_authitemchild
 -- ----------------------------
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_access_setting');
 INSERT INTO `wl_authitemchild` VALUES ('admin_advert_index', 'admin_advert_add');
 INSERT INTO `wl_authitemchild` VALUES ('admin_advert_index', 'admin_advert_create');
 INSERT INTO `wl_authitemchild` VALUES ('admin_advert_index', 'admin_advert_del');
@@ -365,78 +357,40 @@ INSERT INTO `wl_authitemchild` VALUES ('admin_advert_index', 'admin_advert_edit'
 INSERT INTO `wl_authitemchild` VALUES ('admin_advert_index', 'admin_advert_list');
 INSERT INTO `wl_authitemchild` VALUES ('admin_advert_index', 'admin_advert_listorder');
 INSERT INTO `wl_authitemchild` VALUES ('admin_advert_index', 'admin_advert_templet');
-INSERT INTO `wl_authitemchild` VALUES ('admin_advert_index', 'admin_advert_type');
 INSERT INTO `wl_authitemchild` VALUES ('admin_article_index', 'admin_article_create');
 INSERT INTO `wl_authitemchild` VALUES ('admin_article_index', 'admin_article_delete');
 INSERT INTO `wl_authitemchild` VALUES ('admin_article_index', 'admin_article_deleteAll');
-INSERT INTO `wl_authitemchild` VALUES ('admin_article_index', 'admin_article_search');
 INSERT INTO `wl_authitemchild` VALUES ('admin_article_index', 'admin_article_update');
 INSERT INTO `wl_authitemchild` VALUES ('admin_attachment_index', 'admin_attachment_delete');
 INSERT INTO `wl_authitemchild` VALUES ('admin_attachment_index', 'admin_attachment_deleteAll');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_attachment_index');
 INSERT INTO `wl_authitemchild` VALUES ('admin_badword_index', 'admin_badword_create');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_badword_create');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_badword_index');
 INSERT INTO `wl_authitemchild` VALUES ('admin_column_index', 'admin_column_create');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_column_create');
 INSERT INTO `wl_authitemchild` VALUES ('admin_column_index', 'admin_column_custom');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_column_custom');
 INSERT INTO `wl_authitemchild` VALUES ('admin_column_index', 'admin_column_customUpdate');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_column_customUpdate');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_column_index');
 INSERT INTO `wl_authitemchild` VALUES ('admin_column_index', 'admin_column_link');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_column_link');
 INSERT INTO `wl_authitemchild` VALUES ('admin_column_index', 'admin_column_linkUpdate');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_column_linkUpdate');
 INSERT INTO `wl_authitemchild` VALUES ('admin_column_index', 'admin_column_update');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_column_update');
 INSERT INTO `wl_authitemchild` VALUES ('admin_content_init', 'admin_content_findColumn');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_content_findColumn');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_content_init');
 INSERT INTO `wl_authitemchild` VALUES ('admin_copyfrom_index', 'admin_copyfrom_create');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_copyfrom_create');
 INSERT INTO `wl_authitemchild` VALUES ('admin_copyfrom_index', 'admin_copyfrom_delete');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_copyfrom_index');
 INSERT INTO `wl_authitemchild` VALUES ('admin_copyfrom_index', 'admin_copyfrom_update');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_database_index');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_default_updateCache');
 INSERT INTO `wl_authitemchild` VALUES ('admin_gallery_index', 'admin_gallery_create');
 INSERT INTO `wl_authitemchild` VALUES ('admin_gallery_index', 'admin_gallery_delete');
 INSERT INTO `wl_authitemchild` VALUES ('admin_gallery_index', 'admin_gallery_deleteAll');
 INSERT INTO `wl_authitemchild` VALUES ('admin_gallery_index', 'admin_gallery_update');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_log_index');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_manage_changepass');
 INSERT INTO `wl_authitemchild` VALUES ('admin_manage_index', 'admin_manage_create');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_manage_create');
 INSERT INTO `wl_authitemchild` VALUES ('admin_manage_index', 'admin_manage_delete');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_manage_delete');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_manage_index');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_manage_profile');
 INSERT INTO `wl_authitemchild` VALUES ('admin_manage_index', 'admin_manage_update');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_manage_update');
 INSERT INTO `wl_authitemchild` VALUES ('admin_menu_index', 'admin_menu_create');
 INSERT INTO `wl_authitemchild` VALUES ('admin_menu_index', 'admin_menu_delete');
 INSERT INTO `wl_authitemchild` VALUES ('admin_menu_index', 'admin_menu_update');
 INSERT INTO `wl_authitemchild` VALUES ('admin_model_index', 'admin_model_create');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_model_create');
 INSERT INTO `wl_authitemchild` VALUES ('admin_model_index', 'admin_model_delete');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_model_delete');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_model_index');
 INSERT INTO `wl_authitemchild` VALUES ('admin_model_index', 'admin_model_update');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_model_update');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_module_advlist');
-INSERT INTO `wl_authitemchild` VALUES ('admin_module_index', 'admin_module_create');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_module_create');
-INSERT INTO `wl_authitemchild` VALUES ('admin_module_index', 'admin_module_del');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_module_del');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_module_index');
-INSERT INTO `wl_authitemchild` VALUES ('admin_module_index', 'admin_module_upate');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_module_upate');
 INSERT INTO `wl_authitemchild` VALUES ('admin_mparam_index', 'admin_mparam_create');
 INSERT INTO `wl_authitemchild` VALUES ('admin_mparam_index', 'admin_mparam_delete');
 INSERT INTO `wl_authitemchild` VALUES ('admin_mparam_index', 'admin_mparam_update');
-INSERT INTO `wl_authitemchild` VALUES ('admin_content_init', 'admin_page_edit');
-INSERT INTO `wl_authitemchild` VALUES ('admin_content_init', 'admin_page_preview');
+INSERT INTO `wl_authitemchild` VALUES ('admin_page_edit', 'admin_page_preview');
 INSERT INTO `wl_authitemchild` VALUES ('admin_position_index', 'admin_position_create');
 INSERT INTO `wl_authitemchild` VALUES ('admin_position_index', 'admin_position_delete');
 INSERT INTO `wl_authitemchild` VALUES ('admin_release_index', 'admin_release_cdelete');
@@ -446,23 +400,12 @@ INSERT INTO `wl_authitemchild` VALUES ('admin_release_index', 'admin_release_lis
 INSERT INTO `wl_authitemchild` VALUES ('admin_release_index', 'admin_release_listorder');
 INSERT INTO `wl_authitemchild` VALUES ('admin_release_index', 'admin_release_update');
 INSERT INTO `wl_authitemchild` VALUES ('admin_role_index', 'admin_role_create');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_role_create');
 INSERT INTO `wl_authitemchild` VALUES ('admin_role_index', 'admin_role_delete');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_role_delete');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_role_index');
 INSERT INTO `wl_authitemchild` VALUES ('admin_role_index', 'admin_role_setaccess');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_role_setaccess');
 INSERT INTO `wl_authitemchild` VALUES ('admin_role_index', 'admin_role_update');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_role_update');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_setting_index');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_sitemap_index');
 INSERT INTO `wl_authitemchild` VALUES ('admin_urlmanage_index', 'admin_urlmanage_create');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_urlmanage_create');
 INSERT INTO `wl_authitemchild` VALUES ('admin_urlmanage_index', 'admin_urlmanage_delete');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_urlmanage_delete');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_urlmanage_index');
 INSERT INTO `wl_authitemchild` VALUES ('admin_urlmanage_index', 'admin_urlmanage_update');
-INSERT INTO `wl_authitemchild` VALUES ('SystemAdmin', 'admin_urlmanage_update');
 
 -- ----------------------------
 -- Table structure for wl_badword
@@ -537,7 +480,7 @@ INSERT INTO `wl_column` VALUES ('16', 'content', '1', 'design', '3', '15', '0,15
 INSERT INTO `wl_column` VALUES ('17', 'content', '1', 'program', '3', '15', '0,15', '0', '17', 'web开发', '', '', '/index.php?r=article/list&keyparam=program', null, '0', '0', 'a:3:{s:9:\"metaTitle\";s:0:\"\";s:11:\"metaKeyword\";s:0:\"\";s:15:\"metaDescription\";s:0:\"\";}', '0', '1', 'webkaifa', '_self', '2');
 INSERT INTO `wl_column` VALUES ('18', 'content', '1', 'android', '3', '15', '0,15', '0', '18', 'App制作', '', '', '/index.php?r=article/list&keyparam=android', null, '0', '0', 'a:3:{s:9:\"metaTitle\";s:0:\"\";s:11:\"metaKeyword\";s:0:\"\";s:15:\"metaDescription\";s:0:\"\";}', '0', '1', 'ppzhizuo', '_self', '2');
 INSERT INTO `wl_column` VALUES ('19', 'content', '1', 'contact', '4', '0', '0', '0', '19', '联系我们', '', '', '/?r=page/edit&keyparam=contact', null, '0', '0', 'a:3:{s:9:\"metaTitle\";s:0:\"\";s:11:\"metaKeyword\";s:0:\"\";s:15:\"metaDescription\";s:0:\"\";}', '0', '1', 'lianxiwomen', '_self', '2');
-INSERT INTO `wl_column` VALUES ('20', 'content', '1', 'photo', '5', '0', '0', '0', '20', '图库', '', '', '/?r=gallery/index&keyparam=photo', null, '17', '0', 'a:3:{s:9:\"metaTitle\";s:0:\"\";s:11:\"metaKeyword\";s:0:\"\";s:15:\"metaDescription\";s:0:\"\";}', '0', '1', 'tuku', '_self', '2');
+INSERT INTO `wl_column` VALUES ('20', 'content', '1', 'photo', '5', '0', '0', '0', '20', '图库', '', '', '/?r=gallery/index&keyparam=photo', null, '16', '0', 'a:3:{s:9:\"metaTitle\";s:0:\"\";s:11:\"metaKeyword\";s:0:\"\";s:15:\"metaDescription\";s:0:\"\";}', '0', '1', 'tuku', '_self', '2');
 
 -- ----------------------------
 -- Table structure for wl_column_param
@@ -618,7 +561,6 @@ CREATE TABLE `wl_gallery` (
 -- ----------------------------
 -- Records of wl_gallery
 -- ----------------------------
-INSERT INTO `wl_gallery` VALUES ('32', '20', '5', '1', 'sdfasdfasdfasdfasdfasdf', '', '', '', '', '<p>asdfsadfasdfasdfasdf<br /></p>', '1', '', '1', '1', '0', '0', '2014-08-07 17:30:11', '2014-08-07 17:39:51');
 
 -- ----------------------------
 -- Table structure for wl_gallery_img
@@ -639,7 +581,6 @@ CREATE TABLE `wl_gallery_img` (
 -- ----------------------------
 -- Records of wl_gallery_img
 -- ----------------------------
-INSERT INTO `wl_gallery_img` VALUES ('20', '32', 'Gallery', '5', '/uploadfiles/images/0/20140726/14063628154738.jpg', '二级页面-账户注册修改版');
 
 -- ----------------------------
 -- Table structure for wl_menu
@@ -660,7 +601,7 @@ CREATE TABLE `wl_menu` (
   KEY `listorder` (`listorder`),
   KEY `parentid` (`parent_id`),
   KEY `module` (`m`,`c`,`a`)
-) ENGINE=MyISAM AUTO_INCREMENT=119 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=120 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of wl_menu
@@ -765,6 +706,8 @@ INSERT INTO `wl_menu` VALUES ('115', '添加图集', '114', 'admin', 'gallery', 
 INSERT INTO `wl_menu` VALUES ('116', '修改图集', '114', 'admin', 'gallery', 'update', 'column_id={$column_id}', '0', '0', '');
 INSERT INTO `wl_menu` VALUES ('117', '删除图集', '114', 'admin', 'gallery', 'delete', 'column_id={$column_id}', '0', '0', '');
 INSERT INTO `wl_menu` VALUES ('118', '批量删除', '114', 'admin', 'gallery', 'deleteAll', 'column_id={$column_id}', '0', '0', '');
+INSERT INTO `wl_menu` VALUES ('1', '我的面板', '0', 'admin', 'default', 'main', '', '1', '1', '');
+INSERT INTO `wl_menu` VALUES ('119', '标签管理', '23', 'admin', 'tags', 'index', '', '3', '1', '');
 
 -- ----------------------------
 -- Table structure for wl_model_object
@@ -792,7 +735,7 @@ CREATE TABLE `wl_model_object` (
 -- ----------------------------
 INSERT INTO `wl_model_object` VALUES ('3', '文章模型', '', 'article', 'index', '', 'Article', '3', 'admin', 'article', 'index', '', '1');
 INSERT INTO `wl_model_object` VALUES ('4', '单页面', '', 'page', 'index', '', 'Page', '1', 'admin', 'page', 'edit', '', '0');
-INSERT INTO `wl_model_object` VALUES ('5', '图库模型', '', 'gallery', 'index', '', 'Gallery', '17', 'admin', 'gallery', 'index', '', '1');
+INSERT INTO `wl_model_object` VALUES ('5', '图库模型', '', 'gallery', 'index', '', 'Gallery', '16', 'admin', 'gallery', 'index', '', '1');
 
 -- ----------------------------
 -- Table structure for wl_model_param
@@ -949,6 +892,42 @@ INSERT INTO `wl_setting` VALUES ('base', '基本设置', 'a:10:{s:5:\"title\";s:
 INSERT INTO `wl_setting` VALUES ('count', '统计代码', 'a:1:{s:4:\"code\";s:17:\"<script></script>\";}');
 INSERT INTO `wl_setting` VALUES ('email', '邮件设置', 'a:5:{s:6:\"server\";s:11:\"smtp.qq.com\";s:4:\"port\";s:2:\"25\";s:7:\"address\";s:14:\"admin@test.com\";s:8:\"username\";s:14:\"admin@test.com\";s:8:\"password\";s:6:\"123456\";}');
 INSERT INTO `wl_setting` VALUES ('upload', '上传设置', 'a:9:{s:4:\"size\";s:4:\"2000\";s:8:\"fileType\";s:67:\"jpg|jpeg|gif|bmp|png|doc|docx|xls|xlsx|ppt|pptx|pdf|txt|rar|zip|swf\";s:9:\"waterWith\";s:3:\"300\";s:11:\"waterHeight\";s:3:\"300\";s:9:\"waterName\";s:8:\"mark.png\";s:12:\"waterTouming\";s:3:\"100\";s:12:\"waterQuality\";s:3:\"100\";s:12:\"thumbQuality\";s:3:\"100\";s:13:\"waterPosition\";s:1:\"3\";}');
+
+-- ----------------------------
+-- Table structure for wl_tags
+-- ----------------------------
+DROP TABLE IF EXISTS `wl_tags`;
+CREATE TABLE `wl_tags` (
+  `id` int(11) NOT NULL COMMENT '自动编号',
+  `title` varchar(100) NOT NULL COMMENT '标签名称',
+  `num` int(11) NOT NULL DEFAULT '0' COMMENT '内容数量',
+  `post_id` smallint(6) NOT NULL COMMENT '创建人',
+  `created` datetime DEFAULT NULL,
+  `updated` datetime DEFAULT NULL,
+  `hits` int(11) NOT NULL DEFAULT '0' COMMENT '点击次数',
+  `listorder` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of wl_tags
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for wl_tags_item
+-- ----------------------------
+DROP TABLE IF EXISTS `wl_tags_item`;
+CREATE TABLE `wl_tags_item` (
+  `id` int(11) NOT NULL COMMENT '自动编号',
+  `tags_id` int(11) DEFAULT NULL COMMENT '标签ID',
+  `model_name` char(20) DEFAULT NULL COMMENT '模型名称',
+  `content_id` int(11) DEFAULT NULL COMMENT '内容ID',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of wl_tags_item
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for wl_urlrule
