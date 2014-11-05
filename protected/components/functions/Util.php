@@ -281,5 +281,19 @@ class Util extends CController {
 	    $arrchild_array=explode(',', $arrchild_str);
 	    return array_splice($arrchild_array,1);
 	}
+
+    public static function getCloud($objects,$num){
+	    if($num==0)return '12';
+
+	    $num_array=array();
+	    foreach ( $objects as $v) {
+		    $num_array[]=$v->num;
+	    }
+	    $minimumCount = min(  $num_array );
+	    $maximumCount = max( $num_array );
+	    $spread = $maximumCount - $minimumCount;
+
+        return 12 + ( $num - $minimumCount ) * 12 / $spread;
+    }
 }
 ?>

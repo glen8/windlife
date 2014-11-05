@@ -1158,3 +1158,55 @@ body.content_create{
 #content_create .left_content table.table_form{
 	margin-bottom: 54px;
 } 
+#content_create .right_content .tags p{
+	line-height: 24px;
+}
+
+
+#tags_selected_list li{
+	float:left;
+	line-height:20px;
+	background: url(../../images/admin/biao_del.jpg) no-repeat 3px top;
+	padding-left: 20px;
+	padding-right: 3px;
+	cursor: pointer;
+}
+#tags_selected_list li:hover{
+	background: url(../../images/admin/biao_del.jpg) no-repeat 3px bottom;
+}
+#tags_selected_list li span{
+	cursor:default;
+}
+.tags_select_a{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #004499;
+    display: inline-block;
+    margin-top: 10px;
+    font-size:14px;
+    font-weight: bold;
+}
+#tags_used_list{
+    font-family: "微软雅黑";
+    margin: 3px 0;
+    border: 1px solid #e3e3e3;
+    border-radius: 3px;
+    background: #efefef;
+    padding: 3px;
+    display: none;
+}
+#tags_used_list li{
+    float: left;
+    line-height: 24px;
+    padding-left: 3px;
+    margin: 3px 0;
+    text-decoration: underline;
+
+    cursor: pointer;
+}
+#tags_used_list li a {
+     color: #004499;
+}
+#tags_used_list li:hover{
+    color: #0092CE;
+}

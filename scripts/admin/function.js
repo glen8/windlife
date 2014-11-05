@@ -213,7 +213,51 @@ $(document).ready(function(){
     $('a[rel=click_search]').click(function(){
     	$('#search').show();
     });
-	
+    
+    //标签相关
+    
+    //添加标签
+    $('#wl_tags_create_button').click(function(){
+    	if($('#wl_tags_create_input').val()!=''){
+    		$.post($(this).attr('data-url'),{tags_str:$('#wl_tags_create_input').val(),YII_CSRF_TOKEN:$('input[name=YII_CSRF_TOKEN]').val()},function(data){
+    			if(data!='0'){
+    				$.each(data,function(i,item){
+    					if($('#tags_selected_list li[data='+item.id+']').length==0){
+    						$('#tags_selected_list').append('<li data="'+item.id+'"><span>'+item.title+'</span><li>');
+    					}
+    				});
+    				total_tags();
+    			}
+    			else{
+    				alert('系统错误,请联系管理员')
+    			}
+    		},'json');
+    	}
+    	else{
+    		alert('请输入您要添加的标签');
+    	}
+    });
+    
+    //删除标签
+    $('body').on('click','#tags_selected_list li',function(){
+    	$(this).remove();
+    	total_tags();
+    });
+
+    //显示常用标签
+    $('a[rel=tags_select_a]').click(function(){
+        $('#tags_used_list').show();
+    });
+
+    //从常用标签里面选择标签
+    $('#tags_used_list li').click(function(){
+        var tags_id=$(this).attr('data');
+        if(tags_id!=''&&$('#tags_selected_list li[data='+tags_id+']').length==0){
+            $('#tags_selected_list').append('<li data="'+tags_id+'"><span>'+$(this).html()+'</span><li>');
+            total_tags();
+        }
+    });
+
 });
 
 //表单验证后方法
@@ -310,4 +354,13 @@ function escImage(id){
 		$('#'+id).val('');
 		$('#'+id).next('img').attr('src','/images/admin/upload_pic.png');
 	}
+}
+
+//统计添加的标签
+function total_tags(){
+	var tags_str='';
+	$.each($('#tags_selected_list li[data]'),function(i,item){
+		tags_str+=(i==0)?$(item).attr('data'):','+$(item).attr('data');
+	});	 
+	$('.tags input[type=hidden]').val(tags_str);
 }

@@ -118,6 +118,15 @@
             'htmlOptions'=>array('class'=>'input-text inputtime_img','style'=>'width: 180px;','readonly'=>'readonly')  
         ));?>    
         </div>
+        <h3 class="right_title padding_top_6">标签</h3>
+        <div class="tags">
+        <?php $this->widget('application.modules.admin.components.widgets.Tag', array(   
+            'model'=>$model,  
+            'attribute'=>'tags_list',
+            'buttonOptions' => array('class'=>'button','style'=>'float:right;margin:0'),  
+            'htmlOptions'=>array('class'=>'input-text','style'=>'width: 130px;float:left;;')              
+        ));?>
+        </div>
         <h3 class="right_title padding_top_6">转向链接</h3>
         <div class="link">
           <p class="link_url"><?php echo $form->textField($model,'url',array('class'=>'input-text','style'=>'width: 180px;')); ?></p>

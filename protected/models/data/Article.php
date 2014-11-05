@@ -31,6 +31,8 @@ class Article extends BaseModel
 	public $search_value;
 	
 	public $release_content;
+	
+	public $tags_list;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -54,7 +56,7 @@ class Article extends BaseModel
 			array('style', 'length', 'max'=>24),
 			array('thumb, copyfrom, url', 'length', 'max'=>100),
 			array('keywords', 'length', 'max'=>40),
-			array('hits, inputtime, updatetime,release_content', 'safe'),
+			array('hits, inputtime, updatetime,release_content,tags_list', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, column_id, title, style, thumb, keywords, description, copyfrom, content, url, listorder, status, islink, admin_id, inputtime, updatetime', 'safe', 'on'=>'search'),
@@ -174,6 +176,10 @@ class Article extends BaseModel
 			'ReleaseContentBehavior' => array(
 				'class'=>'application.components.behaviors.ReleaseContentBehavior',
 			),
+		    'TagsBehavior' => array(
+		        'class'=>'application.components.behaviors.TagsBehavior',
+		        'modelName'=>'Article',
+		    ),
 		);
 	}
 }
