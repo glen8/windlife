@@ -19,7 +19,7 @@ class ColumnLinkUpdateAction extends CAction{
 		}
 		$form=new CForm('application.modules.admin.components.forms.columnLinkForm');
 		$form['base']->model=$column_info;
-		$form['base']->elements['parentid']->attributes=array('disabled'=>'disabled');
+		$form['base']->elements['parentid']->attributes=array('disabled'=>'disabled','prompt'=>'作为一级菜单');
 		$data['form']=$form;
 		$data['form_type']=isset($_POST['form_type'])?$_POST['form_type']:'base';
 		if($form->submitted('column_link_form_button') && $form->validate()){

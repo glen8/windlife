@@ -21,7 +21,7 @@ class ColumnUpdateAction extends CAction{
 		if($column_info->items>0){
 		    $form['base']->elements['modelid']->attributes=array('disabled'=>'disabled');
 		}
-		$form['base']->elements['parentid']->attributes=array('disabled'=>'disabled');
+		$form['base']->elements['parentid']->attributes=array('disabled'=>'disabled','prompt'=>'作为一级菜单');
 		$column_seo=new ColumnSeoForm();
 		$column_seo->attributes=unserialize($column_info->setting);
 		$form['seo']->model=$column_seo;

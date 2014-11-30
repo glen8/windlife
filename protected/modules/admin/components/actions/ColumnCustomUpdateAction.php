@@ -17,7 +17,7 @@ class ColumnCustomUpdateAction extends CAction{
 		}
 		$form=new CForm('application.modules.admin.components.forms.columnCustomForm');
 		$form['base']->model=$column_info;
-		$form['base']->elements['parentid']->attributes=array('disabled'=>'disabled');
+		$form['base']->elements['parentid']->attributes=array('disabled'=>'disabled','prompt'=>'作为一级菜单');
 		$column_param=new ColumnParamForm();
 		$column_param->attributes=unserialize($column_info->urlparam);
 		$form['param']->model=$column_param;
