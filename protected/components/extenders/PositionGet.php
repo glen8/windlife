@@ -4,7 +4,7 @@ class PositionGet extends CComponent
 {	
 	public function init(){}
 	
-	public static function get($key,$position){
+	public static function get($key,$position,$option=array()){
 		if($position=='1'){
 			Yii::app()->cacheManage->cacheName='AdvertCache';
 			$advert_cache=Yii::app()->cacheManage->findCache();
@@ -13,7 +13,7 @@ class PositionGet extends CComponent
 			$ad_key=$advert_data['ad_key'];
 			$class_name=ucfirst($ad_key);
 			$ad_object=$ad_key.'Ad';
-			Yii::app()->setComponent($ad_object, array('class'=>'application.extensions.wl_advert.'.$ad_key.'.'.$class_name,'setting'=>$advert_data));
+			Yii::app()->setComponent($ad_object, array('class'=>'application.extensions.wl_advert.'.$ad_key.'.'.$class_name,'setting'=>$advert_data,'option'=>$option));
 			return Yii::app()->$ad_object->getCode();
 		}
 		if($position=='0'){

@@ -5,6 +5,8 @@ class Banner extends CComponent
 	public $setting;
 	
 	private $config;
+
+    public $option;
 	
 	
 	public function init(){		

@@ -5,7 +5,8 @@ class Stripfocus extends CComponent
 	public $setting;
 	
 	private $config;
-	
+
+    public $option;
 	
 	public function init(){		
 		$this->config=require __DIR__.DIRECTORY_SEPARATOR.'config.php';

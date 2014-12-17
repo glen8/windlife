@@ -4,6 +4,8 @@ class Jslides extends CComponent{
 	public $setting;
 	
 	private $config;
+
+    public $option;
 	
 	public function init(){
 		$this->config=require dirname(__FILE__).DIRECTORY_SEPARATOR.'config.php';
@@ -16,8 +18,8 @@ class Jslides extends CComponent{
 		$cs->registerCoreScript('jquery');
 		$cs->registerScriptFile ( $assets . '/jquery.jslides.js' );
 		$cs->registerCssFile ( $assets . '/jquery.jslides.css' );
-		$str='<div id="full-screen-slider" style="height:'.$this->setting['height'].'px;">';
-		$str.='<ul id="slides" style="height:'.$this->setting['height'].'px;'.$this->setting['style'].'">';
+		$str='<div id="full-screen-slider" style="height:'.$this->setting['height'].';">';
+		$str.='<ul id="slides" style="height:'.$this->setting['height'].';'.$this->setting['style'].'">';
 		if(isset($this->setting['items'][0])){
 			foreach ($this->setting['items'] as $v){
 				$str.='<li style="background: url('.Yii::app()->baseUrl.$v['file_url'].') no-repeat center center;">';
