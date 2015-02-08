@@ -158,7 +158,7 @@ class ArticleController extends AdminController
 			),
 			'delete' => array(
 				'class'      => 'application.modules.admin.components.actions.DeleteAction',
-				'modelClass' => 'article',
+				'modelClass' => 'Article',
 				'message'    => array('success'=>'删除成功！'),
 				'redirectTo' => 'admin/article/index',
 				'redirectParam' => array('column_id'=>isset($_GET['column_id'])?(int)$_GET['column_id']:0)
